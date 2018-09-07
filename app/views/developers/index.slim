@@ -1,25 +1,35 @@
 h1 Search Developers
 
 = form_tag(developers_path, method: :get, enforce_utf8: false) do
+  = label_tag "Programming Language"
+  br
   = text_field_tag 'programming_language', @programming_language
+  br
+  = label_tag "Language"
   br
   = text_field_tag 'language', @language
   br
   = submit_tag 'Search', name: nil
 
-h2 Developer List
-table
-  thead
-    tr
-      th ID 
-      th Email
-      th Programming Languages
-      th Languages
-  tbody
-    - @developers.each do |dev|
+- if @developers.present?
+  - if @programming_language.present? || @language.present?
+    - if @developers.count <= 1
+      p= "Find #{@developers.count} result" 
+    - else
+      p= "Find #{@developers.count} results" 
+  h2 Developer List
+  table
+    thead
       tr
-        td= dev.id
-        td= dev.email
-        td= dev.programming_languages_list
-        td= dev.languages_list
+        th ID 
+        th Email
+        th Programming Languages
+        th Languages
+    tbody
+      - @developers.each do |dev|
+        tr
+          td= dev.id
+          td= dev.email
+          td= dev.programming_languages_list
+          td= dev.languages_list
 
