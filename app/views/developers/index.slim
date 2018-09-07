@@ -11,14 +11,14 @@ h1 Search Developers
   br
   = submit_tag 'Search', name: nil
 
+- if @programming_language.present? || @language.present?
+  - if @count < 2
+    p= "Find #{@count} result with these keywords \"#{@programming_language + " " + @language}.strip\"" 
+  - else
+    p= "Find #{@count} results with these keywords \"#{@programming_language + " " + @language}\"" 
 - if @developers.present?
-  - if @programming_language.present? || @language.present?
-    - if @developers.count <= 1
-      p= "Find #{@developers.count} result" 
-    - else
-      p= "Find #{@developers.count} results" 
   h2 Developer List
-  table
+  table.developers-table
     thead
       tr
         th ID 
