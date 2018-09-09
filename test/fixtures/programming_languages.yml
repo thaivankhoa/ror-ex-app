@@ -1,7 +1,11 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+ruby:
+  id: 1
+  name: ruby
 
-one:
-  name: MyString
+javascript:
+  id: 2
+  name: javascript
 
-two:
-  name: MyString
+python:
+  id: 3
+  name: python

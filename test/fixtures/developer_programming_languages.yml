@@ -1,11 +1,11 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+dev1_pro_lan1:
+  developer_id: 1
+  programming_language_id: 1
 
-# This model initially had no columns defined. If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-# column: value
+dev2_pro_lan1:
+  developer_id: 2
+  programming_language_id: 2
+
+dev3_pro_lan1:
+  developer_id: 3
+  programming_language_id: 3
