@@ -1,0 +1,9 @@
+dev1:
+  id: 1
+  email: dev1@gmail.com
+dev2:
+  id: 2
+  email: dev2@gmail.com
+dev3:
+  id: 3
+  email: dev3@gmail.com

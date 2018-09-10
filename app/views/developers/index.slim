@@ -1,0 +1,35 @@
+h1 Search Developers
+
+= form_tag(developers_path, method: :get, enforce_utf8: false) do
+  = label_tag "Programming Language"
+  br
+  = text_field_tag 'programming_language', @programming_language
+  br
+  = label_tag "Language"
+  br
+  = text_field_tag 'language', @language
+  br
+  = submit_tag 'Search', name: nil
+
+- if @programming_language.present? || @language.present?
+  - if @count < 2
+    p= "Find #{@count} result with these keywords \"#{@programming_language + " " + @language}.strip\"" 
+  - else
+    p= "Find #{@count} results with these keywords \"#{@programming_language + " " + @language}\"" 
+- if @developers.present?
+  h2 Developer List
+  table.developers-table
+    thead
+      tr
+        th ID 
+        th Email
+        th Programming Languages
+        th Languages
+    tbody
+      - @developers.each do |dev|
+        tr
+          td= dev.id
+          td= dev.email
+          td= dev.programming_languages_list
+          td= dev.languages_list
+

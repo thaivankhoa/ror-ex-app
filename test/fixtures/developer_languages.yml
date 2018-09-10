@@ -1,0 +1,11 @@
+dev1_lan1:
+  developer_id: 1
+  language_id: 1
+
+dev1_lan2:
+  developer_id: 1
+  language_id: 2
+  
+dev2_lan2:
+  developer_id: 2
+  language_id: 2
